@@ -1,6 +1,6 @@
 import React, { SyntheticEvent, useContext, useState } from 'react';
 import { SearchContext } from '../context/searchContext';
-import Button from '../common/Button';
+import { Btn } from '../common/Button';
 import './Header.module.css';
 
 const Header = () => {
@@ -17,14 +17,14 @@ const Header = () => {
       <h1>
         <strong>Local</strong> Announcements
       </h1>
-      <Button text='Add your announcement' />
+      <Btn to='/add' text='Add your announcement' />
       <form className='search' onSubmit={handleSubmit}>
         <input
           type='text'
           value={inputVal}
           onChange={(e) => setInputVal(e.target.value)}
         />
-        <Button text='Search' />
+        <Btn text='Search' />
       </form>
     </header>
   );
